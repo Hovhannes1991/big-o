@@ -1,18 +1,62 @@
 #main {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    padding: 100px 50px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  padding: 100px 50px;
 }
 
 .circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    color: #fff;
-    /* background-color: red; */
-    border-radius: 100%;
-    width: 100px;
-    height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+  /* background-color: red; */
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
 }
+
+#tree {
+  display: grid;
+  gap: 30px 0;
+  grid-template-areas:
+    "root root"
+    "left right";
+}
+
+#root,
+.root {
+  grid-area: root;
+  display: flex;
+  justify-content: center;
+}
+
+#left,
+.left {
+  grid-area: left;
+  position: relative;
+  left: -50px;
+}
+
+#right,
+.right {
+  grid-area: right;
+  position: relative;
+  left: 50px;
+}
+/* 
+#left::before,
+.left::before,
+#right::before,
+.right::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 50px;
+  display: block;
+  width: 5px;
+  background: #5f126c;
+  height: 40px;
+} */
