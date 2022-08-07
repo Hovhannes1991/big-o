@@ -1,6 +1,6 @@
 const path = require("path");
 const HTMLPlugin = require("html-webpack-plugin");
-// const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   devtool: "source-map",
@@ -23,9 +23,9 @@ module.exports = {
     new HTMLPlugin({
       template: "./src/index.html",
     }),
-    // new CopyPlugin({
-    //   patterns: [{ from: "public", to: path.join(__dirname, "dist") }],
-    // }),
+    new CopyPlugin({
+      patterns: [{ from: "public", to: path.join(__dirname, "dist") }],
+    }),
   ],
   module: {
     rules: [
